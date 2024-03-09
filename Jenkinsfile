@@ -31,6 +31,7 @@ pipeline {
     stages {
         stage('get the version') {
             steps {
+
                 script{
                     def packageJson = readJSON file: 'package.json'
                     packageVersion = packageJson.version
@@ -41,9 +42,11 @@ pipeline {
                 
             }
         }
-        stage('Test') {
+        stage('Install dependencies') {
             steps {
-                echo 'Testing..'
+                sh """
+                    npm install
+                """
             }
         }
         stage('Deploy') {
