@@ -54,7 +54,9 @@ pipeline {
                 """   
                 
             }
-        }
+       }
+
+    }   
     //     stage('check params') {
     //         steps {
     //             sh """
