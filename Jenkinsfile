@@ -49,6 +49,13 @@ pipeline {
                 """
             }
         }
+        stage('test') {
+            steps {
+                sh """
+                    echo 'hello test script'
+                """
+            }
+        }
         stage('Deploy') {
             steps {
                 sh """
