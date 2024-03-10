@@ -49,10 +49,10 @@ pipeline {
                 """
             }
         }
-        stage('test') {
+        stage('build') {
             steps {
                 sh """
-                    echo 'hello test script'
+                    ls -la
                 """
             }
         }
