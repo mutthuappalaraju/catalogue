@@ -20,9 +20,13 @@ pipeline {
                 }
             }
         }
-        stage('Test') {
+        stage('Build') {
             steps {
-                echo 'Testing..'
+                sh """
+                  ls -la
+                  zip -q -r catalogue.zip  ./* -x ".git" -x "*.zip"
+                  ls -ltr
+                """
             }
         }
         // stage('Deploy') {
