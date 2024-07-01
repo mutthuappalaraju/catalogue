@@ -25,16 +25,16 @@ pipeline {
                 echo 'Testing..'
             }
         }
-        stage('Deploy') {
-            steps {
-                sh """
-                   echo 'heloo shell script'
-                   env
-                   echo '$GREETING'
-                """   
+        // stage('Deploy') {
+        //     steps {
+        //         sh """
+        //            echo 'heloo shell script'
+        //            env
+        //            echo '$GREETING'
+        //         """   
                 
-            }
-        }
+        //     }
+        // }
          
     }
     post { 
